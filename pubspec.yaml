@@ -21,3 +21,11 @@ flutter:
   assets:
     - images/Owl.png
     - images/bruce.png
+  fonts:
+  - family: MonteCarlo
+    fonts:
+    - asset: fonts/MonteCarlo-Regular.ttf
+
+  - family: EB Garamond
+    fonts:
+    - asset: fonts/EBGaramond-VariableFont_wght.ttf

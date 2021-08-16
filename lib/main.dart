@@ -3,10 +3,8 @@ import 'package:flutter/services.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-    DeviceOrientation.portraitDown
-  ]);
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   runApp(TestApp());
 }
 
@@ -18,7 +16,7 @@ class TestApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Knowledge Quest'),
+          title: Text('AppStore Business Business Card'),
           backgroundColor: Colors.teal,
         ),
         backgroundColor: Colors.teal[200],
@@ -27,16 +25,30 @@ class TestApp extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 50,
-                backgroundImage: AssetImage('images/Owl.png'),
-              ),
-              CircleAvatar(
-                radius: 50,
                 backgroundImage: AssetImage('images/bruce.png'),
               ),
               Text(
-                'Bruce Wilson'
-              )
-
+                'Bruce Wilson',
+                style: TextStyle(
+                  fontFamily: 'MonteCarlo',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40.0,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'Flutter Developer',
+                style: TextStyle(
+                    fontFamily: 'EB Garamond',
+                    color: Colors.white70,
+                    fontSize: 25.0,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold),
+              ),
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/Owl.png'),
+              ),
             ],
           ),
           // child:
