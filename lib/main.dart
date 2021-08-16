@@ -16,16 +16,21 @@ class TestApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('AppStore Business Business Card'),
+          title: Text('AppStore Business Card'),
           backgroundColor: Colors.teal,
         ),
         backgroundColor: Colors.teal[200],
         body: Center(
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('images/bruce.png'),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  child: CircleAvatar(
+                    radius: 50,
+                    backgroundImage: AssetImage('images/bruce.png'),
+                  ),
+                ),
               ),
               Text(
                 'Bruce Wilson',
@@ -45,10 +50,26 @@ class TestApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold),
               ),
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('images/Owl.png'),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin:EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text('BruceWilson1103@gmail.com')
+                  ],
+                ),
               ),
+              // CircleAvatar(com
+              //   radius: 50,
+              //   backgroundImage: AssetImage('images/Owl.png'),
+              // ),
             ],
           ),
           // child:
