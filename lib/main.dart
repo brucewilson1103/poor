@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
   runApp(TestApp());
 }
 
@@ -17,10 +23,23 @@ class TestApp extends StatelessWidget {
         ),
         backgroundColor: Colors.teal[200],
         body: Center(
-          child: Image(
-            image: AssetImage('images/Owl.png'),
-            // image: NetworkImage('https://images.unsplash.com/photo-1593672755342-741a7f868732?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8MTAwJTIwZG9sbGFyJTIwYmlsbHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80')
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/Owl.png'),
+              ),
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('images/bruce.png'),
+              ),
+              Text(
+                'Bruce Wilson'
+              )
+
+            ],
           ),
+          // child:
         ),
       ),
     );
